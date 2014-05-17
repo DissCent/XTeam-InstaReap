@@ -2434,8 +2434,8 @@ void DisplayHUDScores(struct tHUDItem *hitem)
 
 					if(Anarchy_hud_display==AHD_EFFICIENCY){
 						float t = pr->dstats.kills[DSTAT_LEVEL]+pr->dstats.suicides[DSTAT_LEVEL]+pr->dstats.deaths[DSTAT_LEVEL];
-						float value = (float)(pr->dstats.kills[DSTAT_LEVEL])/((t)?t:0.0000001f);
-						DLLgrtext_Printf(score_x,team_y[pr->team],"%.1f",value);
+						float value = (float)(pr->dstats.kills[DSTAT_LEVEL])/((t)?t:0.00001f);
+						DLLgrtext_Printf(score_x-10,team_y[pr->team],"%.2f",value);
 					}else{
 						DLLgrtext_Printf(score_x,team_y[pr->team],"%d",pr->dstats.kills[DSTAT_LEVEL]-pr->dstats.suicides[DSTAT_LEVEL]);
 					}
@@ -2465,8 +2465,8 @@ void DisplayHUDScores(struct tHUDItem *hitem)
 
 					if(Anarchy_hud_display==AHD_EFFICIENCY){
 						float t = pr->dstats.kills[DSTAT_LEVEL]+pr->dstats.suicides[DSTAT_LEVEL]+pr->dstats.deaths[DSTAT_LEVEL];
-						float value = (float)(pr->dstats.kills[DSTAT_LEVEL])/((t)?t:0.0000001f);
-						DLLgrtext_Printf(score_x,team_y[pr->team],"%.1f",value);
+						float value = (float)(pr->dstats.kills[DSTAT_LEVEL])/((t)?t:0.00001f);
+						DLLgrtext_Printf(score_x-10,team_y[pr->team],"%.2f",value);
 					}else{
 						DLLgrtext_Printf(score_x,team_y[pr->team],"%d",pr->dstats.kills[DSTAT_LEVEL]-pr->dstats.suicides[DSTAT_LEVEL]);
 					}
